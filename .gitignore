@@ -7,4 +7,5 @@ venv/
 __pycache__/
 
 # VS Code specific
-.vscode/
+.vscode/backend/backend_venv/
+User_Frontend/frontend_venv/
