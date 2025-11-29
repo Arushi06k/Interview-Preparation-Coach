@@ -1,33 +1,5 @@
-# Interview Preparation Coach
-
-A collection of resources, exercises, and study plans to help software engineers and interview candidates prepare for technical interviews.
-
-## Table of contents
-
-- [About](#about)
-- [Features](#features)
-- [Technologies](#technologies)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
-## About
-
-This repository serves as a centralized place for curated interview questions, coding challenges, study guides, and tips for whiteboard and system design interviews. It's organized so learners can pick topics, follow practice plans, and track progress.
-
-## Features
-
-- Curated lists of coding problems by topic and difficulty
-- Study plans for 30/60/90-day interview preparation
-- Notes and cheat-sheets for algorithms, data structures, and system design
-- Example solutions and explanations
-
-## Technologies
-
-This repository may contain code and notes in multiple languages and formats (e.g., Python, JavaScript, Markdown). Check directories for language-specific examples.
-
+# 🧠 Automated Interview Preparation Coach  
+An AI-powered, cross-platform interview practice system that evaluates your responses using **speech analysis**, **semantic understanding**, and **domain-based question generation**.
 ## Getting Started
 
 1. Clone the repository:
@@ -52,10 +24,96 @@ Contributions are welcome! Please follow these steps:
 
 Please include tests or examples where appropriate and ensure content is well-formatted and explained.
 
-## License
+---
 
-This project is open-source. Add a LICENSE file to specify the license you want to use (e.g., MIT).
+## 🚀 Features
 
-## Contact
+### 🎤 Voice-Based Interview
+- Real-time microphone recording
+- Speech-to-text conversion using STT engines
+- Text-to-speech (TTS) for delivering questions
 
-If you have questions or suggestions, open an issue or contact the repository owner.
+### 🧠 Smart AI Evaluation
+- **Semantic Scoring** using SBERT MiniLM embeddings  
+- **Keyword Matching** with SpaCy PhraseMatcher  
+- **Delivery Evaluation**: fluency, readability, fillers, clarity  
+- **Final Hybrid Score** (Content + Communication)
+
+### 📚 Domain-Based Questioning
+- Curated dataset of **1650 interview questions**
+- 11 domains, 3 difficulty levels  
+- Follow-up question support  
+- Resume-based domain suggestion (optional)
+
+### 📊 Detailed Feedback Dashboard
+- Question-wise score breakdown  
+- Strengths & weaknesses  
+- Improvement suggestions  
+- Data visualizations
+
+### 📱 Cross-Platform Frontend (Flutter)
+- Login & onboarding  
+- Resume upload  
+- Domain selection  
+- Interview screen with recording  
+- Results page  
+
+### ⚙️ Backend with FastAPI
+- REST APIs for interview flow  
+- Audio processing  
+- NLP scoring  
+- Database persistence (SQLite)
+
+### Modules:
+- **Frontend (Flutter)** — UI, audio capture, API communication  
+- **Backend (FastAPI)** — question logic, scoring engine  
+- **ML Models** — SBERT MiniLM, SpaCy, readability metrics  
+- **Database** — SQLite for session storage  
+
+---
+## 🏗️ System Architecture
+
+Flutter App → FastAPI Backend → STT Engine → NLP Scoring Engine → SQLite DB → Feedback Dashboard
+
+## 🧩 Tech Stack
+
+### Frontend
+- Flutter  
+- Dart  
+- Provider / Bloc (state management)  
+- file_picker, dio, flutter_sound  
+
+### Backend
+- Python  
+- FastAPI  
+- Uvicorn  
+- SQLite  
+
+### ML/NLP
+- Sentence-BERT (MiniLM-L6-v2)  
+- SpaCy PhraseMatcher  
+- Textstat  
+- Google Speech-to-Text / Whisper  
+- gTTS  
+
+## 📁 Project Structure
+
+root/
+│
+├── frontend/
+│ ├── lib/
+│ ├── assets/
+│ ├── pubspec.yaml
+│
+├── backend/
+│ ├── main.py
+│ ├── api/
+│ ├── models/
+│ ├── scoring/
+│ ├── resume_parser/
+│ ├── database/
+│
+├── dataset/
+│ ├── interview_questions.csv
+│
+└── README.md
