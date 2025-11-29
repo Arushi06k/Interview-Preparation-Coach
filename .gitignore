@@ -1,0 +1,24 @@
+# Virtual environments
+backend/backend_venv/
+User_Frontend/frontend_venv/
+
+# Python cache / artifacts
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Environments / secrets
+.env
